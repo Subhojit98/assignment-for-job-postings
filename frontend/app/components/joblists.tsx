@@ -83,7 +83,7 @@ const JobLists = ({ resumeSearch }: { resumeSearch: ResumeSearch }) => {
             </div>
 
             {isSearched && <div className="mt-5 mx-1">
-                <span className="max-w-max bg-gray-50 text-neutral-700 rounded-sm text-xs px-2 py-2 font-semibold"> {allJobs.length} results found for {query}</span>
+                <span className="max-w-max bg-gray-100 text-neutral-800 rounded-sm text-xs px-2 py-2 font-semibold"> {allJobs.length} results found for {query}</span>
             </div>}
 
             <ul className=" h-[80%] mt-5 overflow-y-auto">
@@ -99,11 +99,11 @@ const JobLists = ({ resumeSearch }: { resumeSearch: ResumeSearch }) => {
                                     <CardTitle className="textlg sm:text-xl">{job?.job_title}</CardTitle>
                                     <div >
                                         <span className="inline-flex items-center gap-2">
-                                            <MapPin size={14} />
+                                            <MapPin size={14} color="#00a80b" />
                                             <span className="text-xs text-gray-500">{job?.job_location || "Remote"}</span>
                                         </span>
                                     </div>
-                                    <CardDescription className="text-xs text-gray-400 inline-flex items-center gap-2"><Building2 size={14} /> {job?.company_name}</CardDescription>
+                                    <CardDescription className="text-xs text-gray-400 inline-flex items-center gap-2"><Building2 color="#000000" size={14} /> {job?.company_name}</CardDescription>
                                 </div>
                             </CardHeader>
                             <Separator className="bg-gray-100 max-w-[96%] m-auto" />
