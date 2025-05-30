@@ -53,7 +53,6 @@ const uploadResumePdf = asyncHandler(async (req, res) => {
         const buffer = fs.readFileSync(filePath);
         const data = await pdfParse(buffer);
         resumeText = data.text;
-        console.log(resumeText)
 
     } else if (ext === '.docx' || ext === '.doc') {
         const buffer = fs.readFileSync(filePath);
